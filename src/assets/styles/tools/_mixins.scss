@@ -1,0 +1,10 @@
+@mixin breakpoint($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+/* TAmaños de las pantallas */
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;

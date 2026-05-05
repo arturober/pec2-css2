@@ -1,0 +1,19 @@
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  color: var(--color-text-main);
+  background-color: var(--color-background);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  line-height: var(--line-height-heading);
+  color: var(--color-primary);
+  font-weight: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}

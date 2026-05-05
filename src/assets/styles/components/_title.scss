@@ -1,0 +1,82 @@
+@use '../tools/mixins' as *;
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.c-title {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  overflow: hidden;
+
+  &__background {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    object-fit: cover;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    /* Efecto de degradado del fondo */
+    background: linear-gradient(to bottom, rgba(26,26,26,0.3) 0%, rgba(26,26,26,0.8) 100%);
+  }
+
+  &__content-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__content {
+    max-width: 800px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: color-mix(in srgb, var(--color-primary) 40%, transparent);
+    border-radius: 0.5rem;
+  }
+
+  &__heading {
+    font-size: var(--font-size-h1);
+    color: var(--color-white);
+    margin: 0;
+    text-shadow: var(--text-shadow-md);
+    opacity: 0;
+    animation: fadeInUp var(--transition-xslow) var(--ease-out) forwards;
+  }
+
+  &__subheading {
+    font-size: var(--font-size-base);
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeInUp 1s var(--ease-out) 0.5s forwards;
+  }
+
+  .c-button {
+    opacity: 0;
+    animation: fadeInUp var(--transition-slow) var(--ease-out) var(--transition-slow) forwards;
+  }
+}

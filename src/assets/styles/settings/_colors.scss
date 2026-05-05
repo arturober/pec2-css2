@@ -1,0 +1,29 @@
+:root {
+  /* =========================================
+     1. COLOR PRINCIPAL: Terracota (Arcilla)
+     ========================================= */
+  --terracota-light: oklch(85% 0.05 45);   /* Fondos destacados suaves */
+  --terracota-base:  oklch(55% 0.15 45);   /* Botones, enlaces, acentos principales */
+  --terracota-dark:  oklch(35% 0.10 45);   /* Estados hover en botones, bordes */
+
+  /* =========================================
+     2. COLOR SECUNDARIO: Verde Salvia
+     ========================================= */
+  --salvia-light: oklch(90% 0.03 140);     /* Badges, etiquetas, fondos secundarios */
+  --salvia-base:  oklch(65% 0.08 140);     /* Iconos, ilustraciones, acentos secundarios */
+  --salvia-dark:  oklch(40% 0.06 140);     /* Texto sobre fondos salvia-light */
+
+  /* =========================================
+     3. COLOR NEUTRAL/FONDO: Lino (Arena)
+     ========================================= */
+  --lino-light: oklch(98% 0.01 80);        /* Fondo principal de la página (casi blanco) */
+  --lino-base:  oklch(92% 0.02 80);        /* Tarjetas de producto, secciones de fondo */
+  --lino-dark:  oklch(80% 0.03 80);        /* Líneas divisorias, bordes sutiles */
+
+  /* =========================================
+     4. COLOR DE TEXTO/TINTA: Madera Oscura
+     ========================================= */
+  --madera-light: oklch(45% 0.01 40);      /* Texto secundario, descripciones cortas */
+  --madera-base:  oklch(25% 0.02 40);      /* Texto de párrafos (cuerpo principal) */
+  --madera-dark:  oklch(15% 0.02 40);      /* Títulos principales (H1, H2, encabezados) */
+}

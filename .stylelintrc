@@ -1,0 +1,26 @@
+{
+  "extends": ["stylelint-config-recommended-scss"],
+  "plugins": ["stylelint-scss"],
+  "rules": {
+    "selector-class-pattern": [
+      "^(?:(?:o|c|u|t|s|is|has|_|js|qa)-)?[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*(?:__[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:--[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:\\[.+\\])?$",
+      {
+        "message": "El nombre de la clase debe seguir el estándar BEM (e.g., .c-block__element--modifier)"
+      }
+    ],
+    "max-nesting-depth": [
+      3,
+      {
+        "ignoreAtRules": ["each", "media", "supports", "include"],
+        "message": "No se deben anidar más de 3 niveles para no crear una especificidad muy alta."
+      }
+    ],
+    "declaration-property-unit-allowed-list": {
+      "/(^border)/": ["px", "%", "rem", "em"],
+      "/^font-size|^padding|^gap|^margin/": ["rem", "em"]
+    },
+    "unit-allowed-list": ["%", "vw" ,"dvw", "px", "rem", "vh", "dvh", "fr", "em", "s", "px", "deg" ],
+    "scss/selector-no-redundant-nesting-selector": true,
+    "no-descending-specificity": null
+  }
+}

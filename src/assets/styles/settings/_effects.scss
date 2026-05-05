@@ -1,0 +1,17 @@
+:root {
+  --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+  --text-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.5);
+  --text-shadow-md: 0 4px 10px rgba(0, 0, 0, 0.4);
+
+  --transition-fast: 0.3s;
+  --transition-normal: 0.6s;
+  --transition-slow: 0.8s;
+  --transition-xslow: 1.2s;
+
+  --ease-base: ease;
+  --ease-out: ease-out;
+  --ease-bounce: cubic-bezier(0.2, 1, 0.2, 1);
+}

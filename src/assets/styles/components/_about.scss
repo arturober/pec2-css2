@@ -1,0 +1,25 @@
+@use '../tools/mixins' as *;
+
+.c-about {
+  padding-block: 6rem;
+  background-color: var(--color-background);
+
+  &__heading {
+    font-size: var(--font-size-h2);
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+  }
+
+  &__text {
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: var(--shadow-lg);
+  }
+}
