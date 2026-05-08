@@ -6,8 +6,8 @@
   z-index: 100;
   color: var(--madera-base);
   padding: 1rem;
-  background-color: color-mix(in srgb, var(--lino-light) 50%, transparent);
-  backdrop-filter: blur(6px);
+  background-color: color-mix(in srgb, var(--lino-light) 75%, transparent);
+  backdrop-filter: blur(12px);
   justify-content: space-between;
 
   &__nav__list {
