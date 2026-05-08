@@ -1,0 +1,36 @@
+<header class="c-header">
+  <div class="o-container o-layout__row u-space-between">
+    <div class="o-layout__row c-header__logo">
+      <picture>
+        <source type="image/avif" srcset="assets/images/logo.avif?height=100" />
+        <source type="image/webp" srcset="assets/images/logo.webp?height=100" />
+        <img src="assets/images/logo.png?height=100" alt="Logo" />
+      </picture>
+      Woodstyle
+    </div>
+    <nav class="c-header__nav o-layout__row">
+      <input type="checkbox" id="menu-opened" class="c-header__menu-input" />
+      <label for="menu-opened" class="c-header__menu-btn">
+        <svg
+          width="30"
+          height="30"
+          class="block"
+          viewBox="0 -960 960 960"
+          fill="currentColor"
+          id="menu"
+          aria-label="Abrir menú de navegación"
+        >
+          <path class="line top" d="M120-640v-80h720v80H120Z" />
+          <path class="line middle" d="M120-440v-80h720v80H120Z" />
+          <path class="line bottom" d="M120-240v-80h720v80H120Z" />
+        </svg>
+      </label>
+      <ul class="o-layout__row c-header__nav__list">
+        <li><a href="speakers.html">Ponentes</a></li>
+        <li><a href="about-us.html">Nosotros</a></li>
+        <li><a href="gallery.html">Galería</a></li>
+        <li class="c-header__nav__list__line"></li>
+      </ul>
+    </nav>
+  </div>
+</header>

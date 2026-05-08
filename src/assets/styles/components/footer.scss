@@ -1,0 +1,59 @@
+@use "../tools/mixins" as *;
+
+.c-footer {
+  text-align: center;
+
+  &__title {
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    font-size: var(--font-size-small);
+  }
+
+  &__divider {
+    border-top: 1px solid var(--lino-dark);
+    margin-top: 0.5rem;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    @include breakpoint($bp-md) {
+      flex-direction: row;
+    }
+  }
+
+  &__logo {
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    gap: 0.5rem;
+    img {
+      height: 30px;
+      filter: grayscale(1);
+    }
+    display: none;
+
+    @include breakpoint($bp-md) {
+      display: flex;
+    }
+  }
+
+  &__nav {
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+  }
+
+  &__social {
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+  }
+}

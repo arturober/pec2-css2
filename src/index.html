@@ -4,14 +4,35 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
     <!-- do not remove this line! -->
     <title>UOC Boilerplate</title>
   </head>
-  <body>
-    
+  <body class="o-layout__column o-full__height">
+    <include src="./views/header.html"></include>
+    <main class="u-flex-grow c-portada">
+      <div class="c-portada__arriba"></div>
+      <div class="c-portada__caja-izquierda"></div>
+      <div class="c-portada__caja-esquina-arriba"></div>
+      <div class="c-portada__caja-arriba"></div>
+      <div class="c-portada__caja-esquina-abajo"></div>
+      <div class="c-portada__abajo"></div>
+      <div class="c-portada__caja">
+        <h1>I Jornadas de Artesanía Sostenible</h1>
+        <h2>Un retorno a los orígenes</h2>
+        <div>
+          <p>15-18 de mayo, 2026</p>
+          <p>Priego, Cuenca</p>
+        </div>
+        <div>Reserva tu plaza ahora</div>
+      </div>
+    </main>
+    <include src="./views/footer.html"></include>
   </body>
 </html>

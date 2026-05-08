@@ -2,9 +2,10 @@ body {
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   line-height: var(--line-height-body);
-  color: var(--color-text-main);
-  background-color: var(--color-background);
+  color: var(--madera-dark);
+  background-color: var(--lino-light);
   min-height: 100vh;
+  overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {

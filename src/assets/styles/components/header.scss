@@ -1,0 +1,149 @@
+@use "../tools/mixins" as *;
+
+.c-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  color: var(--madera-base);
+  padding: 1rem;
+  background-color: color-mix(in srgb, var(--lino-light) 50%, transparent);
+  backdrop-filter: blur(6px);
+  justify-content: space-between;
+
+  &__nav__list {
+    flex-direction: column;
+    gap: 0;
+    padding-top: 5rem;
+    background-color: var(--madera-base);
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform var(--transition-fast) ease-in-out;
+
+    li {
+      padding: 0.5rem;
+      width: 100%;
+    }
+
+    a {
+      color: var(--lino-base);
+      display: inline-block;
+      width: 100%;
+      padding-left: 1rem;
+    }
+
+    a:hover {
+      color: var(--lino-light);
+    }
+
+    #menu-opened:checked ~ & {
+      transform: translateX(0);
+    }
+
+    @include breakpoint($bp-md) {
+      flex-direction: row;
+      padding-top: 0;
+      background-color: transparent;
+      position: relative;
+      width: auto;
+      height: auto;
+      transform: none;
+
+      li {
+        padding: 0 1rem;
+        width: auto;
+      }
+
+      a {
+        color: var(--madera-dark);
+        padding-left: 0;
+      }
+
+      a:hover {
+        color: var(--madera-light);
+      }
+
+      &__line {
+        position: absolute;
+        bottom: 0rem;
+        height: 2px;
+        width: 20% !important;
+        visibility: hidden;
+        background-color: var(--lino-dark);
+        transition: left var(--transition-fast) var(--ease-base);
+
+        li:hover ~ & {
+          visibility: visible;
+        }
+
+        li:first-child:hover ~ & {
+          left: 8%;
+        }
+
+        li:nth-child(2):hover ~ & {
+          left: 43%;
+        }
+
+        li:nth-child(3):hover ~ & {
+          left: 75%;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    font-weight: bold;
+    font-size: var(--font-size-h4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: var(--text-shadow-sm);
+
+    img {
+      height: 50px;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+    }
+  }
+
+  &__menu-input {
+    display: none;
+  }
+
+  &__menu-btn {
+    cursor: pointer;
+    display: inline-block;
+    z-index: 10;
+
+    .line {
+      z-index: 10;
+      transition:
+        transform var(--transition-fast) ease,
+        color var(--transition-fast) ease,
+        opacity var(--transition-fast) ease;
+      transform-origin: center;
+      transform-box: fill-box;
+    }
+
+    @include breakpoint($bp-md) {
+      display: none;
+    }
+
+    #menu-opened:checked ~ & {
+      color: var(--lino-base);
+      .top {
+        transform: translateY(200px) rotate(45deg);
+      }
+
+      .middle {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+
+      .bottom {
+        transform: translateY(-200px) rotate(-45deg);
+      }
+    }
+  }
+}
