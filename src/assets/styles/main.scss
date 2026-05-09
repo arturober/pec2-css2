@@ -1,6 +1,6 @@
 @layer bootstrap, settings, tools, generic, elements, objects, components, utilities;
 
-@import "../../../node_modules/bootstrap/scss/bootstrap" layer(bootstrap);
+@import "./bootstrap/bootstrap-custom" layer(bootstrap);
 
 @import "./settings/colors" layer(settings);
 @import "./settings/effects" layer(settings);
@@ -18,5 +18,8 @@
 @import "./components/header" layer(components);
 @import "./components/footer" layer(components);
 @import "./components/home" layer(components);
+@import "./components/speakers" layer(components);
+@import "./components/about" layer(components);
+@import "./components/gallery" layer(components);
 
 @import "./utility/utilities" layer(utilities);

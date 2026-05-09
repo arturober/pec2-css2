@@ -1,13 +1,32 @@
-@use '../tools/mixins' as *;
+@use "../tools/mixins" as *;
 
 .c-about {
-  padding-block: 6rem;
-  background-color: var(--color-background);
+  :is(p, h1, h2, h3, h4) {
+    margin: 1rem auto;
+  }
 
-  &__heading {
-    font-size: var(--font-size-h2);
-    margin-bottom: 2rem;
-    color: var(--color-primary);
+  div:has(dl, ul, li) {
+    padding: 1rem 4rem;
+    border-style: solid;
+    border-color: var(--lino-dark);
+    border-width: 1px 0;
+  }
+
+  dt {
+    font-weight: bold;
+    margin: 0.5rem 0;
+    position: relative;
+    color: var(--terracota-dark);
+
+    &::before {
+      content: url(../../icons/check_circle.svg);
+      width: 1.5rem;
+      height: 1.5rem;
+      display: block;
+      position: absolute;
+      left: -2.5rem;
+      top: 0.25rem;
+    }
   }
 
   &__text {
@@ -16,10 +35,57 @@
     margin-bottom: 1.5rem;
   }
 
-  &__image {
+  &__heading {
+    position: relative;
     width: 100%;
-    height: auto;
-    border-radius: 4px;
-    box-shadow: var(--shadow-lg);
+
+    &__image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 4px;
+      opacity: 75%;
+    }
+
+    &__title {
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      width: 100%;
+      padding: 3.5rem 10% 1.5rem 10%;
+      background-color: color-mix(in srgb, var(--lino-light) 100%, transparent);
+      text-align: center;
+      clip-path: ellipse(70% 100% at center bottom);
+      container-type: inline-size;
+      container-name: title-container;
+
+      h1 {
+        font-size: var(--font-size-h3);
+        // color: var(--terracota-dark);
+
+        @container title-container (min-width: 600px) {
+          font-size: var(--font-size-h2);
+        }
+      }
+
+      .name {
+        color: var(--terracota-base);
+        font-weight: bolder;
+      }
+
+      .author {
+        color: var(--salvia-base);
+      }
+    }
+  }
+
+  &__intro {
+    color: var(--madera-light);
+
+    @container main-container (min-width: 800px) {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
   }
 }

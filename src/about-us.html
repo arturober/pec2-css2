@@ -1,0 +1,265 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <!-- do not remove this line! -->
+    <title>Bienvenido | WoodStyle</title>
+    <script type="module" src="assets/scripts/main.js"></script>
+    <script type="module" src="assets/scripts/about-us.js"></script>
+  </head>
+  <body class="o-layout__column o-full__height">
+    <include src="./views/header.html"></include>
+    <main class="u-flex-grow c-about o-container">
+      <div class="c-about__heading">
+        <picture>
+          <source
+            type="image/avif"
+            srcset="assets/images/taller.jpeg?as=avif"
+          />
+          <source
+            type="image/webp"
+            srcset="assets/images/taller.jpeg?as=webp"
+          />
+          <img
+            src="assets/images/taller.jpeg"
+            class="c-about__heading__image"
+            alt="Ponente1"
+          />
+        </picture>
+        <div class="c-about__heading__title">
+          <h1>
+            El Origen de <span class="name">WOODSTYLE</span>: El valor de lo
+            hecho a mano
+          </h1>
+          <p class="author">Por Arturo Bernal</p>
+        </div>
+      </div>
+      <div class="c-about__intro">
+        <blockquote>
+          "Vivimos en un mundo acelerado donde predomina lo efímero. MAESTRÍA
+          nace como un refugio para detener el tiempo y reconectar con la
+          materia."
+        </blockquote>
+        <div>
+          <p>
+            Hace apenas tres años, un pequeño grupo de creadores locales se
+            reunió con una inquietud común: las técnicas tradicionales se
+            estaban perdiendo en favor de la producción en masa. Decidieron que
+            era el momento de abrir las puertas de sus talleres, no solo para
+            vender sus piezas, sino para educar y compartir su pasión con el
+            mundo.
+          </p>
+          <p>
+            Lo que comenzó como una modesta feria de fin de semana, ha
+            evolucionado hasta convertirse en estas jornadas. Un espacio donde
+            la madera, el barro, el vidrio, los textiles y el metal cobran vida
+            gracias a la dedicación absoluta de quienes han perfeccionado su
+            oficio a lo largo de décadas.
+          </p>
+        </div>
+      </div>
+      <div>
+        <dl>
+          <dt>Preservación del Oficio</dt>
+          <dd>
+            Rescatamos y documentamos técnicas en peligro de extinción,
+            transmitiéndolas directamente de maestros a nuevas generaciones.
+          </dd>
+          <dt>Sostenibilidad Real</dt>
+          <dd>
+            Fomentamos el uso de materiales locales, procesos de muy bajo
+            impacto ambiental y la creación de objetos diseñados para durar toda
+            la vida.
+          </dd>
+          <dt>Innovación Respetuosa</dt>
+          <dd>
+            Creemos firmemente en la combinación del saber hacer ancestral con
+            el diseño contemporáneo, creando piezas únicas con identidad.
+          </dd>
+          <dt>Tejido Comunitario</dt>
+          <dd>
+            Construimos una red de apoyo mutuo entre creadores, proveedores
+            locales y un público que valora el consumo consciente.
+          </dd>
+        </dl>
+      </div>
+      <h2>
+        Un espacio para la divulgación, la práctica y el aprendizaje activo
+      </h2>
+      <p>
+        Durante tres días completos, el antiguo recinto industrial se
+        transformará en un inmenso taller abierto. Nuestra filosofía es clara:
+        mirar no es suficiente. Queremos que los asistentes se manchen las manos
+        de barro, huelan la madera recién cortada y sientan el calor de la
+        fragua.
+      </p>
+      <p>
+        Por ello, las Jornadas de Fabricación Artesanal no son una simple
+        exposición, sino una experiencia inmersiva. Más allá de la zona de
+        mercado, hemos preparado una intensa agenda de conferencias técnicas,
+        mesas redondas sobre el futuro de la artesanía y, por supuesto,
+        masterclasses prácticas donde tú serás el protagonista.
+      </p>
+      <div id="carrusel" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carrusel"
+            data-bs-slide-to="0"
+            class="active u-content-box"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carrusel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+            class="u-content-box"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carrusel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+            class="u-content-box"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <picture>
+              <source
+                type="image/avif"
+                srcset="assets/images/jornadas.jpg?as=avif"
+              />
+              <source
+                type="image/webp"
+                srcset="assets/images/jornadas.jpg?as=webp"
+              />
+              <img
+                src="assets/images/jornadas.jpg"
+                alt="Jornadas"
+                class="w-100"
+              />
+            </picture>
+          </div>
+          <div class="carousel-item">
+            <picture>
+              <source
+                type="image/avif"
+                srcset="assets/images/jornadas2.jpg?as=avif"
+              />
+              <source
+                type="image/webp"
+                srcset="assets/images/jornadas2.jpg?as=webp"
+              />
+              <img
+                src="assets/images/jornadas2.jpg"
+                alt="Jornadas"
+                class="w-100"
+              />
+            </picture>
+          </div>
+          <div class="carousel-item">
+            <picture>
+              <source
+                type="image/avif"
+                srcset="assets/images/jornadas3.jpg?as=avif"
+              />
+              <source
+                type="image/webp"
+                srcset="assets/images/jornadas3.jpg?as=webp"
+              />
+              <img
+                src="assets/images/jornadas3.jpg"
+                alt="Jornadas"
+                class="w-100"
+              />
+            </picture>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carrusel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carrusel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <p>
+        Te invitamos a formar parte de este movimiento. Ya seas un profesional
+        del sector buscando ampliar tus conocimientos, un aficionado con ganas
+        de aprender, o simplemente alguien que aprecia la belleza de los objetos
+        creados con alma y paciencia, tienes un lugar reservado aquí.
+      </p>
+      <p>
+        ¡Únete a nosotros y celebremos juntos la imperfección perfecta del
+        trabajo manual!.
+        <button
+          class="btn btn-primary ms-2"
+          data-bs-toggle="collapse"
+          data-bs-target="#form-unirse"
+          aria-expanded="false"
+          aria-controls="form-unirse"
+        >
+          Unirse a la comunidad
+        </button>
+      </p>
+      <div class="collapse" id="form-unirse">
+        <div class="input-group mb-3">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Correo Electrónico"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+          />
+          <button
+            class="btn btn-secondary u-text-light"
+            type="button"
+            id="button-addon2"
+          >
+            Enviar
+          </button>
+        </div>
+        <div>
+          <p>Alcancemos el objetivo de 500 personas en la comunidad.</p>
+          <div class="progress">
+            <div
+              class="progress-bar bg-secondary"
+              role="progressbar"
+              aria-label="Personas en la comunidad"
+              style="width: 25%"
+              aria-valuenow="125"
+              aria-valuemin="0"
+              aria-valuemax="500"
+            >
+              25%
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <include src="./views/footer.html"></include>
+  </body>
+</html>

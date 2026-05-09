@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <!-- do not remove this line! -->
+    <title>Bienvenido | WoodStyle</title>
+    <script type="module" src="assets/scripts/main.js"></script>
+    <script type="module" src="assets/scripts/gallery.js"></script>
+  </head>
+  <body class="o-layout__column o-full__height">
+    <include src="./views/header.html"></include>
+    <main class="u-flex-grow c-gallery o-container">
+      <h1 class="c-gallery__title">Galería de imágenes</h1>
+      <p class="c-gallery__text">Pulsa en una imagen para ampliarla</p>
+      <div class="c-gallery__container"></div>
+    </main>
+    <include src="./views/footer.html"></include>
+
+    <div
+      class="modal fade"
+      id="gallery-modal"
+      tabindex="-1"
+      aria-labelledby="Foto Galería"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body m-auto u-padding-0">
+            <img src="assets/images/galeria/img1.jpg" alt="Galería 1">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

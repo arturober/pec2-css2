@@ -11,15 +11,15 @@
     "max-nesting-depth": [
       3,
       {
-        "ignoreAtRules": ["each", "media", "supports", "include"],
+        "ignoreAtRules": ["each", "media", "supports", "include", "container"],
         "message": "No se deben anidar más de 3 niveles para no crear una especificidad muy alta."
       }
     ],
     "declaration-property-unit-allowed-list": {
       "/(^border)/": ["px", "%", "rem", "em"],
-      "/^font-size|^padding|^gap|^margin/": ["rem", "em"]
+      "/^font-size|^padding|^gap|^margin/": ["rem", "em", "%"]
     },
-    "unit-allowed-list": ["%", "vw" ,"dvw", "px", "rem", "vh", "dvh", "fr", "em", "s", "px", "deg" ],
+    "unit-allowed-list": ["%", "vw" ,"dvw", "cqw", "px", "rem", "vh", "dvh", "cqh", "fr", "em", "s", "px", "deg" ],
     "scss/selector-no-redundant-nesting-selector": true,
     "no-descending-specificity": null
   }

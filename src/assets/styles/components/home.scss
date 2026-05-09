@@ -1,7 +1,7 @@
 @use "../tools/mixins" as *;
 
 .c-portada {
-    background-image: image-set(
+  background-image: image-set(
     url("../../images/portada.jpg?as=avif") type("image/avif"),
     url("../../images/portada.jpg?as=webp") type("image/webp"),
     url("../../images/portada.jpg") type("image/jpeg")
@@ -14,8 +14,11 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 0.5rem;
     background-color: var(--lino-light);
+    container-type: inline-size;
+    container-name: caja-container;
 
     h1 {
       color: var(--salvia-dark);
@@ -26,12 +29,24 @@
       color: var(--terracota-base);
     }
 
+    &__info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+
+      @container caja-container (min-width: 600px) {
+        padding-top: 1rem;
+        flex-direction: row;
+      }
+    }
+
     &__fecha {
       border: 2px solid var(--salvia-base);
       color: var(--salvia-base);
       width: fit-content;
       padding: 0.5rem 1rem;
-      margin: auto;
       text-transform: uppercase;
       font-weight: bolder;
       line-height: var(--line-height-heading);
@@ -40,7 +55,6 @@
     &__reserva-link {
       display: block;
       width: fit-content;
-      margin: auto;
       padding: 0.5rem 1rem;
       background-color: var(--terracota-base);
       color: var(--lino-light);
@@ -53,31 +67,49 @@
   }
 
   &__arriba {
-    background-image: linear-gradient(to bottom, var(--lino-light), transparent);
+    background-image: linear-gradient(
+      to bottom,
+      var(--lino-light),
+      transparent
+    );
   }
 
   &__caja-arriba {
-    background-image: linear-gradient(to top, var(--lino-light) 0%, var(--lino-light) 20%, transparent 100%);
+    background-image: linear-gradient(
+      to top,
+      var(--lino-light) 0%,
+      var(--lino-light) 20%,
+      transparent 100%
+    );
   }
 
   @supports (display: grid) {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr 0px 100px 0px 0px 300px;
+    grid-template-rows: 100px 1fr 0px 100px 0px 0px 250px;
 
     @include breakpoint($bp-md) {
       grid-template-columns: 1fr 100px minmax(500px, 50%);
       grid-template-rows: 100px 1fr 100px 200px 100px;
 
       &__arriba {
-        grid-column: 1/ span 3;
-        background-image: linear-gradient(to bottom, var(--lino-light), transparent);
+        grid-column: 1 / span 3;
+        background-image: linear-gradient(
+          to bottom,
+          var(--lino-light),
+          transparent
+        );
       }
 
       &__caja-izquierda {
         grid-column: 2;
         grid-row: 4;
-        background-image: linear-gradient(to left, var(--lino-light) 0%, var(--lino-light) 20%, transparent 100%);
+        background-image: linear-gradient(
+          to left,
+          var(--lino-light) 0%,
+          var(--lino-light) 20%,
+          transparent 100%
+        );
       }
 
       &__caja-arriba {
@@ -88,24 +120,40 @@
       &__caja-esquina-arriba {
         grid-column: 2;
         grid-row: 3;
-        background-image: radial-gradient(circle at bottom right, var(--lino-light) 0%, var(--lino-light) 10%, transparent 70%, transparent 100%);
+        background-image: radial-gradient(
+          circle at bottom right,
+          var(--lino-light) 0%,
+          var(--lino-light) 15%,
+          transparent 70%,
+          transparent 100%
+        );
       }
 
       &__caja-esquina-abajo {
         grid-column: 2;
         grid-row: 5;
-        background-image: radial-gradient(circle at top left, transparent 0% , var(--lino-light) 55%, var(--lino-light) 100%);
+        background-image: radial-gradient(
+          circle at top left,
+          transparent 0%,
+          var(--lino-light) 55%,
+          var(--lino-light) 100%
+        );
       }
 
       &__abajo {
         grid-column: 1;
         grid-row: 5;
-        background-image: linear-gradient(to top, var(--lino-light) 0%, var(--lino-light) 20%, transparent 100%);
+        background-image: linear-gradient(
+          to top,
+          var(--lino-light) 0%,
+          var(--lino-light) 20%,
+          transparent 100%
+        );
       }
 
       &__caja {
         grid-column: 3;
-        grid-row: 4/span 2;
+        grid-row: 4 / span 2;
       }
     }
   }

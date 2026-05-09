@@ -18,3 +18,11 @@ h1, h2, h3, h4, h5, h6 {
 html {
   scroll-behavior: smooth;
 }
+
+blockquote {
+  font-style: italic;
+  color: var(--terracota-base);
+  font-size: var(--font-size-h4);
+  border-left: 4px solid var(--terracota-base);
+  padding-left: 1rem;
+}

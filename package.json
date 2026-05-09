@@ -48,8 +48,12 @@
     "stylelint-config-recommended-scss": "^17.0.1",
     "stylelint-scss": "^7.0.0"
   },
+  "alias": {
+    "@masonry-grid/vanilla": "./node_modules/@masonry-grid/vanilla/dist/index.js"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.2.0",
+    "@masonry-grid/vanilla": "^1.1.0",
     "bootstrap": "^5.3.8"
   }
 }
